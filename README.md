@@ -14,6 +14,8 @@ Run the utility from the comand line:
 
 * Verify that the highest number confirmed is reasonable
 
+Command:
+
     bundle exec script/app current_max_number
 
 * Generate a PDF of the next pages of labels
