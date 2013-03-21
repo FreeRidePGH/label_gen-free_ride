@@ -4,6 +4,12 @@ Utility for generating bike number labels.
 
 After labels are printed, they are confirmed to ensure those numbers are not generated again for the next printing. 
 
+## Installation
+
+Run the setup script 
+
+    rake setup
+
 ## Usage
 
 Run the utility from the comand line:

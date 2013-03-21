@@ -14,6 +14,3 @@ DataMapper.setup(:default,{
 
 DataMapper.finalize
 
-# Create new tables and add columns so
-# the database matches the application models
-DataMapper.auto_migrate!
