@@ -12,34 +12,37 @@ Run the utility from the comand line:
 
 ## Basic workflow
 
-* Verify that the highest number confirmed is reasonable
+### Verify that the highest number confirmed is correct
 
 Command:
 
     bundle exec script/app current_max_number
 
-* Generate a PDF of the next pages of labels
-    * For 10 pages the command is:
+### Generate a PDF of the next pages of labels
 
-Command:
+* See the example For when 10 pages are generated
+
+Example command:
 
     bundle exec script/app gen_pages 10
 
 
-* Print the PDF on label stock
-    * Use manual feed for the label stock
-    * Troubleshoot any printing problems
-        * Re-print specific pages from the PDF if necessary
+### Print the PDF on label stock
 
-* Confirm the highest number that was printed
-    * Update the database to keep track
-    * For example, if the max number printed was 1529:
+* Use manual feed for the label stock
+* Troubleshoot any printing problems
+    * Re-print specific pages from the PDF if necessary
 
-Command:
+### Confirm the highest number that was printed
+
+* Update the database to keep track
+* See the example for when the max number printed was 1529:
+
+Example command:
 
     bundle exec script/app confirm_max_used 1529
 
 
-* Delete the PDF after printing is confirmed
-    * Once a label has been printed for a number, that label should never be printed again
+### Delete the PDF after printing is confirmed
 
+* Once a label has been printed for a number, that label should never be printed again
