@@ -19,7 +19,10 @@ Run the utility from the comand line:
 * Generate a PDF of the next pages of labels
     * For 10 pages the command is:
 
+Command:
+
     bundle exec script/app gen_pages 10
+
 
 * Print the PDF on label stock
     * Use manual feed for the label stock
@@ -30,7 +33,10 @@ Run the utility from the comand line:
     * Update the database to keep track
     * For example, if the max number printed was 1529:
 
+Command:
+
     bundle exec script/app confirm_max_used 1529
+
 
 * Delete the PDF after printing is confirmed
     * Once a label has been printed for a number, that label should never be printed again
