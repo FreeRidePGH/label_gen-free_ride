@@ -1,0 +1,11 @@
+module LabelGenFreeRide
+  def self.data_mapper_config
+    {
+      :adapter => 'sqlite3',
+      :database => 'db/bike_label.db',
+      :username => nil,
+      :password => nil,
+      :host => nil
+    }
+  end
+end

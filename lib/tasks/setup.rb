@@ -3,10 +3,24 @@ task :setup do
 
   puts `bundle install`
 
-  require_relative '../label_gen-free_ride'
+  require File.join(File.dirname(__FILE__), "..", "..", "config", "directories")
 
-  # Create new tables and add columns so
-  # the database matches the application models
-  DataMapper.auto_migrate!
+  # Database config file
+  if !File.exists?(APP_DB_CONFIG_FILE)
+    puts `cp config/database.rb.sample config/database.rb`
+    puts "Database config file created"
+  end
+end
 
+namespace :db do
+  desc "Create new tables and add columns so the database matches the application models"
+  task :migrate do
+    require File.join(File.dirname(__FILE__), "..", "..", "config", "directories")
+    if File.exists?(APP_DB_CONFIG_FILE)
+      require File.join(File.dirname(__FILE__), "..", "label_gen-free_ride")
+      DataMapper.auto_migrate!
+    else
+      puts "Database config file not found. Please run setup"
+    end
+  end
 end
