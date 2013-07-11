@@ -6,9 +6,16 @@ After labels are printed, they are confirmed to ensure those numbers are not gen
 
 ## Installation
 
-Run the setup script 
+Run the setup task
 
     rake setup
+
+* Configure database settings 
+  * Edit the config/database.rb file with correct parameters
+
+Run the database migrate task
+
+    rake db:migrate
 
 ## Usage
 
