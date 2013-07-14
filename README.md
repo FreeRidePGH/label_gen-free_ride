@@ -45,14 +45,18 @@ Example command:
 * Use manual feed for the label stock
 * Print sigle-sided
 * Send the PDF data to the printer directly.
-** Do not let PDF the viewer or printer driver scale the output
+  * Do not let PDF the viewer or printer driver scale the output
 * Convert to post-script if necessary
 
-    lpr -Pprinter -o media=Upper -o sides=one-sided
+Command: 
+
+    lpr -Pprinter -o media=Upper -o sides=one-sided labels.pdf
 
 
 * Troubleshoot any printing problems
-    * Re-print specific pages from the PDF if necessary
+   * Re-print specific pages from the PDF if necessary
+
+Command to extract specific pages:
 
     $ gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=22 -dLastPage=36 -sOutputFile=outfile_p22-p36.pdf 100p-inputfile.pdf
 
