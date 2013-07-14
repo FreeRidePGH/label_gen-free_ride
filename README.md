@@ -43,8 +43,18 @@ Example command:
 ### Print the PDF on label stock
 
 * Use manual feed for the label stock
+* Print sigle-sided
+* Send the PDF data to the printer directly.
+** Do not let PDF the viewer or printer driver scale the output
+* Convert to post-script if necessary
+
+    lpr -Pprinter -o media=Upper -o sides=one-sided
+
 * Troubleshoot any printing problems
     * Re-print specific pages from the PDF if necessary
+
+    $ gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=22 -dLastPage=36 -sOutputFile=outfile_p22-p36.pdf 100p-inputfile.pdf
+
 
 ### Confirm the highest number that was printed
 
