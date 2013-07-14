@@ -46,9 +46,9 @@ Example command:
   * Remove paper from other trays to force input from manual feed
   * Feed a single sheet at a time to prevent multiples from being grabbed
 * Print one-sided
-* Send the PDF data to the printer directly.
-  * Do not let the PDF viewer or printer driver scale the output
-* Convert to post-script if necessary to prevent scaling
+* Do not let the PDF viewer or printer driver scale the output
+  * Send the PDF data to the printer directly
+  * Convert to post-script if necessary to prevent scaling
 
 Command: 
 
