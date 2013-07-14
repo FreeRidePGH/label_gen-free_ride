@@ -50,6 +50,7 @@ Example command:
 
     lpr -Pprinter -o media=Upper -o sides=one-sided
 
+
 * Troubleshoot any printing problems
     * Re-print specific pages from the PDF if necessary
 
