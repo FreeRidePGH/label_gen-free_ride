@@ -70,7 +70,7 @@ Command to extract specific pages:
 
 Example command:
 
-    bundle exec script/app confirm_max_used 1529
+    bundle exec script/app confirm_printed 1529
 
 
 ### Delete the PDF after printing is confirmed
