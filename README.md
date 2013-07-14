@@ -43,10 +43,12 @@ Example command:
 ### Print the PDF on label stock
 
 * Use manual feed for the label stock
-* Print sigle-sided
+  * Remove paper from other trays to force input from manual feed
+  * Feed a single sheet at a time to prevent multiples from being grabbed
+* Print one-sided
 * Send the PDF data to the printer directly.
   * Do not let PDF the viewer or printer driver scale the output
-* Convert to post-script if necessary
+* Convert to post-script if necessary to prevent scaling
 
 Command: 
 
