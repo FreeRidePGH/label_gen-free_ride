@@ -6,6 +6,9 @@ After labels are printed, they are confirmed to ensure those numbers are not gen
 
 ## Installation
 
+    git clone https://github.com/zflat/label_gen-free_ride.git
+    cd label_gen-free-ride
+
 Run the setup task
 
     rake setup
@@ -13,7 +16,13 @@ Run the setup task
 * Configure database settings 
   * Edit the config/database.rb file with correct parameters
 
-Run the database migrate task
+## Database setup
+
+Updating an existing database
+
+    rake db:upgrade
+
+New database only: Run the database migrate task
 
     rake db:migrate
 

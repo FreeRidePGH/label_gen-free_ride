@@ -13,7 +13,19 @@ task :setup do
 end
 
 namespace :db do
-  desc "Create new tables and add columns so the database matches the application models"
+  desc "create new tables and add columns so the database matches the application models"
+
+  task :upgrade do
+    require File.join(File.dirname(__FILE__), "..", "..", "config", "directories")
+  if File.exists?(APP_DB_CONFIG_FILE)
+      require File.join(File.dirname(__FILE__), "..", "label_gen-free_ride")
+      DataMapper.auto_upgrade!
+    else
+      puts "Database config file not found. Please run setup"
+    end
+  end
+
+  desc "Drop existing tables and create new tables and add columns so the database matches the application models"
   task :migrate do
     require File.join(File.dirname(__FILE__), "..", "..", "config", "directories")
     if File.exists?(APP_DB_CONFIG_FILE)
