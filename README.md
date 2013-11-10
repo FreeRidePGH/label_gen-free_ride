@@ -28,6 +28,8 @@ New database only: Run the database migrate task
 
 ## Usage
 
+Use label stock from http://www.onlinelabels.com/Products/OL875LP.htm 
+
 Run the utility from the comand line:
 
     bundle exec script/app
