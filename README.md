@@ -67,9 +67,13 @@ Command:
 * Troubleshoot any printing problems
    * Re-print specific pages from the PDF if necessary
 
+Get a list of printer options:
+
+    lpoptions -p printer -l
+
 Command to extract specific pages:
 
-    $ gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=22 -dLastPage=36 -sOutputFile=outfile_p22-p36.pdf 100p-inputfile.pdf
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dSAFER -dFirstPage=22 -dLastPage=36 -sOutputFile=outfile_p22-p36.pdf 100p-inputfile.pdf
 
 
 ### Confirm the highest number that was printed
