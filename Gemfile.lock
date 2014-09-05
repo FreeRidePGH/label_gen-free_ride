@@ -1,12 +1,12 @@
-PATH
-  remote: /home/william/proj/label_gen
+GIT
+  remote: git://github.com/zflat/label_gen.git
+  revision: a3140a66a5551a425139a141f98538ebd4530087
   specs:
     label_gen (0.0.2)
       data_mapper (~> 1.2.0)
       i18n
       prawn (~> 0.12.0)
       rqrcode (~> 0.4.2)
-      ruby-progressbar (~> 1.4.2)
       thor (~> 0.17)
 
 GEM
@@ -87,7 +87,6 @@ GEM
       pdf-reader (>= 0.9.0)
       ttfunk (~> 1.0.2)
     rqrcode (0.4.2)
-    ruby-progressbar (1.4.2)
     ruby-rc4 (0.1.5)
     stringex (1.5.1)
     thor (0.19.1)
