@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby   
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
+require 'i18n'
+I18n.enforce_available_locales=true
 require 'label_gen-free_ride'
 
 # Run the command line interface
